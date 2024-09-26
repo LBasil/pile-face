@@ -1,0 +1,68 @@
+body {
+    background: radial-gradient(circle, #1b2735, #090a0f);
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+    font-family: 'Orbitron', sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    animation: textExplosion 2s ease forwards;
+}
+
+@keyframes textExplosion {
+    0% { transform: scale(0.1); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+#coin {
+    font-size: 7rem;
+    transition: transform 1s ease-in-out, color 0.5s ease;
+}
+
+#coin.flip {
+    transform: rotateY(1080deg);
+}
+
+#result {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#stats {
+    margin-top: 40px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+button:active {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
+#result.victory {
+    color: #FFD700;
+    animation: victoryEffect 1s ease-in-out;
+}
+
+@keyframes victoryEffect {
+    0% { text-shadow: 0 0 10px #FFD700; transform: scale(0.5); }
+    100% { text-shadow: 0 0 30px #FFD700, 0 0 50px #FFD700; transform: scale(1); }
+}
+
+#result.defeat {
+    color: #FF4500;
+    animation: defeatEffect 1s ease-in-out;
+}
+
+@keyframes defeatEffect {
+    0% { text-shadow: 0 0 10px #FF4500; transform: scale(0.5); }
+    100% { text-shadow: 0 0 30px #FF4500, 0 0 50px #FF4500; transform: scale(1); }
+}

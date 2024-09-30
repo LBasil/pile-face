@@ -5,8 +5,17 @@ body {
     font-family: 'Orbitron', sans-serif;
 }
 
-.modal {
-    color: black;
+.modal-content {
+    background-color: #212529;
+    color: #fff;
+}
+
+.modal-header {
+    border-bottom: 1px solid #6c757d;
+}
+
+.modal-footer {
+    border-top: 1px solid #6c757d;
 }
 
 /* Barre de vie */

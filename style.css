@@ -1,8 +1,44 @@
+/* Style général */
 body {
     background: radial-gradient(circle, #1b2735, #090a0f);
     color: white;
-    transition: background-color 0.3s ease-in-out;
     font-family: 'Orbitron', sans-serif;
+}
+
+.modal {
+    color: black;
+}
+
+/* Barre de vie */
+.health-container {
+    width: 40%;
+}
+
+.health-bar {
+    background-color: #555;
+    width: 100%;
+    height: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.health {
+    height: 100%;
+    background-color: limegreen;
+    width: 100%; /* Remplie au départ */
+    transition: width 0.5s ease;
+}
+
+/* Mode boss */
+#enemyHealth.boss-health {
+    background-color: red; /* Vie de boss */
+}
+
+#result {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 20px;
 }
 
 h1 {
@@ -21,34 +57,11 @@ h1 {
 }
 
 #coin.flip {
-    transform: rotateY(1080deg);
-}
-
-#result {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-#stats {
-    margin-top: 40px;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-}
-
-button:active {
-    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
-}
-
-@keyframes shake {
-    10%, 90% { transform: translate3d(-1px, 0, 0); }
-    20%, 80% { transform: translate3d(2px, 0, 0); }
-    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
-    40%, 60% { transform: translate3d(4px, 0, 0); }
+    transform: rotateY(1080deg); /* 3 tours */
 }
 
 #result.victory {
-    color: #FFD700;
+    color: #FFD700; /* Doré brillant */
     animation: victoryEffect 1s ease-in-out;
 }
 
